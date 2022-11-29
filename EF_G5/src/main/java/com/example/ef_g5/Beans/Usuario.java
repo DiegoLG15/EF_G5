@@ -1,10 +1,20 @@
 package com.example.ef_g5.Beans;
 
 public class Usuario {
+
+    private int idUsuario;
     private String nombre;
     private String correo;
     private String password;
     private Tipo tipo;
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
 
     public String getNombre() {
         return nombre;

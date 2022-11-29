@@ -8,7 +8,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "Servlet", value = "/Servlet")
+@WebServlet(name = "SessionServlet", value = "/SessionServlet")
 public class SessionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

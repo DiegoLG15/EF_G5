@@ -11,7 +11,7 @@ public class DaoLogin extends DaoBase{
 
 
         try(Connection conn = getConnection();
-            PreparedStatement pstm = conn.prepareStatement("SELECT * FROM finaliweb_g5.usuarios WHERE correo= ? and hashedPassword= sha2(?,512);")){
+            PreparedStatement pstm = conn.prepareStatement("SELECT * FROM finaliweb_g5.usuarios WHERE correo= ? and password= sha2(?,512);")){
 
             pstm.setString(1, correo);
             pstm.setString(2,password);

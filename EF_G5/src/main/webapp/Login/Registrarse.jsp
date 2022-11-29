@@ -27,7 +27,7 @@
       <div class="row">
         <div class="col-sm-5" style="margin: 70px 0px 10px 60px">
           <div class="message">
-            <h1 align="center" style="font-family: 'Arial Black'; font-size: 60px">Bienvenidos a MONITORING PUCP</h1>
+            <h1 align="center" style="font-family: 'Arial Black'; font-size: 60px">Registrece V03D</h1>
           </div>
         </div>
         <div class="col-sm"></div>

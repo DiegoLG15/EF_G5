@@ -12,12 +12,16 @@ import java.io.IOException;
 public class SessionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("action") == null ?
-                "loginform" : request.getParameter("action");
+        String action = request.getParameter("accion") == null ?
+                "loginform" : request.getParameter("accion");
 
         RequestDispatcher view;
 
         switch(action){
+            case ("registrar"):
+                view = request.getRequestDispatcher("/Login/Registrarse.jsp");
+                view.forward(request, response);
+                break;
             case "loginform":
                 view = request.getRequestDispatcher("index.jsp");
                 view.forward(request, response);

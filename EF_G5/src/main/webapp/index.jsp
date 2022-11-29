@@ -88,7 +88,7 @@
                 <% session.removeAttribute("msg"); %>
                 <% } %>
 
-
+                <a style="color: #3c6eb7; margin: 0px 0px 0px 0px; font-size: 13px; font-family: 'Arial';" href="<%=request.getContextPath()%>/SessionServlet?accion=registrar">Registrarse</a>
                 <button class="w-100 btn btn-lg btn-primary" type="submit" control-id="ControlID-4">Sign in</button>
                 <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
             </form>

@@ -10,7 +10,23 @@ import java.io.IOException;
 public class SessionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action") == null ?
+                "loginform" : request.getParameter("action");
 
+        RequestDispatcher view;
+
+        switch(action){
+            case "loginform":
+                view = request.getRequestDispatcher("index.jsp");
+                view.forward(request, response);
+                break;
+            case "logout":
+                HttpSession session = request.getSession();
+                session.removeAttribute("usuarioLogueado");
+                session.invalidate();
+                response.sendRedirect(request.getContextPath());
+                break;
+        }
     }
 
     @Override

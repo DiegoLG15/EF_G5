@@ -68,7 +68,7 @@
     <body class="text-center" data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
 
         <main class="form-signin w-100 m-auto">
-            <form method="post" action="<%=request.getContextPath()%>/ServletLogin">
+            <form method="post" action="<%=request.getContextPath()%>/SessionServlet">
                 <img class="mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
                 <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 

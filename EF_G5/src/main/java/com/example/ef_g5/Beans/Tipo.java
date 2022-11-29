@@ -2,14 +2,14 @@ package com.example.ef_g5.Beans;
 
 public class Tipo {
 
-    private int idTipo;
+    private Integer idTipo;
     private String tipo;
 
-    public int getIdTipo() {
+    public Integer getIdTipo() {
         return idTipo;
     }
 
-    public void setIdTipo(int idTipo) {
+    public void setIdTipo(Integer idTipo) {
         this.idTipo = idTipo;
     }
 

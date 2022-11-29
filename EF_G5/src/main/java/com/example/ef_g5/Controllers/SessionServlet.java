@@ -1,5 +1,7 @@
 package com.example.ef_g5.Controllers;
 
+import com.example.ef_g5.Beans.Usuario;
+import com.example.ef_g5.Daos.DaoLogin;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -32,5 +34,25 @@ public class SessionServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String correo = request.getParameter("username");
+        String password = request.getParameter("password");
+        DaoLogin loginDao = new DaoLogin();
+
+        Usuario crendencial = loginDao.buscarUsuario(correo,password);
+        HttpSession session = request.getSession();
+
+
+        if(crendencial != null){
+            if(crendencial.getTipo().getIdTipo()==null){
+                response.sendRedirect(request.getContextPath() + "/ServletAdmin");
+            } else {
+                response.sendRedirect(request.getContextPath() + "/ClienteServlet");
+            }
+
+        } else {
+            session.setAttribute("msg","Datos erroneos");
+            RequestDispatcher requestDispatcher= request.getRequestDispatcher("index.jsp");
+            requestDispatcher.forward(request,response);
+        }
     }
 }
